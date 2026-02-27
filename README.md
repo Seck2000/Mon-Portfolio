@@ -5,9 +5,6 @@ Ce projet a été conçu pour présenter mon parcours, mes compétences et mes r
 
 🚀 **Démo en ligne :** [https://mon-portfolio-iota-ivory.vercel.app](https://mon-portfolio-iota-ivory.vercel.app)
 
-![Aperçu du Portfolio](public/github-profile.png)
-*(Vous pourrez remplacer cette image par une capture d'écran de votre site plus tard)*
-
 ## 📋 Fonctionnalités
 
 - **Navigation fluide** : Utilisation de `react-router-dom` pour une expérience utilisateur sans rechargement de page.
