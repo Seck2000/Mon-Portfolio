@@ -4,35 +4,56 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Développement Frontend",
+      title: "Langages de programmation",
       icon: "💻",
       skills: [
-        "HTML5", "CSS3", "JavaScript (ES6+)", "React.js", 
-        "Responsive Design", "Framer Motion", "Tailwind CSS"
+        "C#", "JavaScript", "PHP", "C"
       ]
     },
     {
-      title: "Développement Backend",
-      icon: "⚙️",
+      title: "Développement Web",
+      icon: "🌐",
       skills: [
-        "C#", ".NET Core", "ASP.NET", "SQL Server", 
-        "MySQL", "API REST", "Entity Framework"
+        "HTML5", "CSS3", "ASP.NET MVC", "React.js"
       ]
     },
     {
-      title: "Outils & DevOps",
+      title: "Bases de données",
+      icon: "🗄️",
+      skills: [
+        "SQL Server", "MySQL", "Entity Framework Core"
+      ]
+    },
+    {
+      title: "Outils & environnements",
       icon: "🛠",
       skills: [
-        "Git", "GitHub", "Visual Studio", "VS Code", 
-        "Postman", "Agile / Scrum", "Vercel"
+        "Visual Studio", "VS Code", "Git", "GitHub", 
+        "Windows", "Méthodologies Agile / Kanban"
       ]
     },
     {
-      title: "Soft Skills",
-      icon: "🤝",
+      title: "Compétences bureautiques",
+      icon: "📊",
       skills: [
-        "Travail d'équipe", "Résolution de problèmes", 
-        "Autonomie", "Communication", "Curiosité", "Gestion du temps"
+        "Microsoft Word", "Excel", "PowerPoint", "Access"
+      ]
+    },
+    {
+      title: "Langues",
+      icon: "🗣️",
+      skills: [
+        "Français (Excellente maîtrise)", 
+        "Anglais (Niveau académique)", 
+        "Poular (Langue maternelle)"
+      ]
+    },
+    {
+      title: "Qualités personnelles",
+      icon: "✨",
+      skills: [
+        "Persévérante", "Rigoureuse", "Organisée", 
+        "Autonome", "Esprit d’équipe"
       ]
     }
   ];
@@ -41,7 +62,7 @@ const Skills = () => {
     <div className="skills-container">
       <div className="skills-header">
         <h1>Mes Compétences</h1>
-        <p>Les technologies et outils que j'utilise au quotidien.</p>
+        <p>Un aperçu de mes acquis techniques, linguistiques et professionnels.</p>
         <div className="underline"></div>
       </div>
 
