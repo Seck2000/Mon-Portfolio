@@ -5,38 +5,34 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Développement Frontend",
+      icon: "💻",
       skills: [
-        { name: "HTML5 / CSS3", level: 90 },
-        { name: "JavaScript (ES6+)", level: 85 },
-        { name: "React.js", level: 80 },
-        { name: "Responsive Design", level: 85 }
+        "HTML5", "CSS3", "JavaScript (ES6+)", "React.js", 
+        "Responsive Design", "Framer Motion", "Tailwind CSS"
       ]
     },
     {
       title: "Développement Backend",
+      icon: "⚙️",
       skills: [
-        { name: "C# / .NET", level: 85 },
-        { name: "ASP.NET Core", level: 80 },
-        { name: "SQL Server / MySQL", level: 75 },
-        { name: "Node.js (Basique)", level: 60 }
+        "C#", ".NET Core", "ASP.NET", "SQL Server", 
+        "MySQL", "API REST", "Entity Framework"
       ]
     },
     {
       title: "Outils & DevOps",
+      icon: "🛠",
       skills: [
-        { name: "Git / GitHub", level: 80 },
-        { name: "Visual Studio / VS Code", level: 90 },
-        { name: "Postman", level: 75 },
-        { name: "Méthodes Agiles (Scrum)", level: 70 }
+        "Git", "GitHub", "Visual Studio", "VS Code", 
+        "Postman", "Agile / Scrum", "Vercel"
       ]
     },
     {
       title: "Soft Skills",
+      icon: "🤝",
       skills: [
-        { name: "Travail d'équipe", level: 95 },
-        { name: "Résolution de problèmes", level: 90 },
-        { name: "Autonomie", level: 85 },
-        { name: "Communication", level: 85 }
+        "Travail d'équipe", "Résolution de problèmes", 
+        "Autonomie", "Communication", "Curiosité", "Gestion du temps"
       ]
     }
   ];
@@ -45,28 +41,22 @@ const Skills = () => {
     <div className="skills-container">
       <div className="skills-header">
         <h1>Mes Compétences</h1>
-        <p>Un aperçu de mes connaissances techniques et professionnelles.</p>
+        <p>Les technologies et outils que j'utilise au quotidien.</p>
         <div className="underline"></div>
       </div>
 
       <div className="skills-grid">
         {skillCategories.map((category, index) => (
           <div key={index} className="skill-category-card">
-            <h3>{category.title}</h3>
-            <div className="skills-list">
+            <div className="category-header">
+              <span className="category-icon">{category.icon}</span>
+              <h3>{category.title}</h3>
+            </div>
+            <div className="skills-badges">
               {category.skills.map((skill, idx) => (
-                <div key={idx} className="skill-item">
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-percentage">{skill.level}%</span>
-                  </div>
-                  <div className="progress-bar-bg">
-                    <div 
-                      className="progress-bar-fill" 
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
+                <span key={idx} className="skill-badge">
+                  {skill}
+                </span>
               ))}
             </div>
           </div>
