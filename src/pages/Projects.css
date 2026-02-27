@@ -1,0 +1,201 @@
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.projects-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #646cff;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Grille de projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Carte Projet */
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.project-content p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.project-tech-container h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Badges Technologies */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-badge {
+  background-color: #f0f4ff;
+  color: #535bf2;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #e0e7ff;
+}
+
+/* Liens */
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.btn-link {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  color: #555;
+  transition: all 0.2s;
+  background-color: transparent;
+}
+
+.btn-link:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+  color: #333;
+}
+
+.btn-link-primary {
+  background-color: #646cff;
+  color: white;
+  border-color: #646cff;
+}
+
+.btn-link-primary:hover {
+  background-color: #535bf2;
+  border-color: #535bf2;
+  color: white;
+  box-shadow: 0 4px 10px rgba(83, 91, 242, 0.3);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .projects-header h1, .project-content h3 {
+    color: #fff;
+  }
+  
+  .projects-header p, .project-content p {
+    color: #ccc;
+  }
+  
+  .project-card {
+    background-color: #2a2a2a;
+    border-color: #444;
+  }
+
+  .project-image {
+    border-bottom-color: #444;
+  }
+  
+  .tech-badge {
+    background-color: #333;
+    color: #a5b4fc;
+    border-color: #444;
+  }
+  
+  .btn-link {
+    border-color: #555;
+    color: #ddd;
+  }
+  
+  .btn-link:hover {
+    background-color: #333;
+    border-color: #777;
+    color: #fff;
+  }
+}

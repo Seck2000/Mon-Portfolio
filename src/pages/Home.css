@@ -1,0 +1,138 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.profile-image-container {
+  margin-bottom: 1.5rem;
+}
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #646cff;
+  box-shadow: 0 8px 25px rgba(100, 108, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(100, 108, 255, 0.5);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Mode sombre support via variable CSS si besoin, ou juste défaut */
+@media (prefers-color-scheme: dark) {
+  .hero-content h1 {
+    color: #fff;
+  }
+}
+
+.highlight {
+  color: #646cff; /* Couleur accent */
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-content h2 {
+    color: #aaa;
+  }
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem; /* Réduit la marge pour le premier paragraphe */
+  line-height: 1.6;
+  color: #555;
+}
+
+.status-text {
+  margin-bottom: 2.5rem !important; /* Marge plus grande avant les boutons */
+  font-weight: 500;
+  color: #333 !important;
+  background-color: rgba(100, 108, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .status-text {
+    color: #fff !important;
+    background-color: rgba(100, 108, 255, 0.2);
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .hero-content p {
+    color: #ccc;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: #646cff;
+  color: white;
+  border: 2px solid #646cff;
+}
+
+.btn-primary:hover {
+  background-color: #535bf2;
+  border-color: #535bf2;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-secondary {
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+}
