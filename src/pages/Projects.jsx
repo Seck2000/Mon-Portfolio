@@ -39,6 +39,14 @@ const Projects = () => {
       technologies: ["C#", ".NET"],
       githubLink: "https://github.com/Seck2000/Revenue_Quebec",
       demoLink: null
+    {
+      id: 5,
+      title: "Gestion de budget",
+      description: "Application web de gestion de budget personnel avec backend Django et frontend React/Vite. Permet le suivi des dépenses/revenus, la visualisation graphique et la génération de rapports détaillés.",
+      image: "https://images.unsplash.com/photo-1554224155-1696413565d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", // Finance / Budget
+      technologies: ["Django", "React", "Vite", "API REST"],
+      githubLink: "https://github.com/Seck2000/Gestion-de-budget",
+      demoLink: null
     }
   ];
 
