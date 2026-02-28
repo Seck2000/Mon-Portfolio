@@ -81,15 +81,16 @@
   .navbar-links {
     position: fixed;
     left: -100%;
-    top: 70px; /* Hauteur de la navbar environ */
+    top: 60px; /* Ajusté pour coller sous la barre */
     flex-direction: column;
     background-color: #333;
     width: 100%;
+    height: calc(100vh - 60px); /* Prend toute la hauteur restante */
     text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    padding: 2rem 0;
-    gap: 2rem;
+    transition: 0.3s ease-in-out;
+    padding: 1rem 0;
+    gap: 1.5rem; /* Espacement réduit */
+    overflow-y: auto; /* Permet le scroll si le menu est trop long */
   }
 
   .navbar-links.active {
@@ -97,6 +98,12 @@
   }
 
   .navbar-links li {
-    margin: 1rem 0;
+    margin: 0.5rem 0; /* Marges réduites */
+  }
+  
+  .navbar-links a {
+    font-size: 1.2rem; /* Taille de police plus lisible */
+    display: block;
+    padding: 0.5rem;
   }
 }
