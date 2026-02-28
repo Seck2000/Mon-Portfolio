@@ -41,8 +41,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  position: sticky;
-  top: 100px; /* Reste visible quand on scroll */
+  /* On enlève le sticky par défaut pour éviter les bugs, on le remettra uniquement sur grand écran */
 }
 
 .about-image img {
@@ -51,6 +50,21 @@
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   object-fit: cover;
+}
+
+/* ... */
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  /* Sticky uniquement sur grand écran où il y a de la place à côté du texte */
+  .about-image {
+    position: sticky;
+    top: 100px;
+  }
 }
 
 .about-text {
