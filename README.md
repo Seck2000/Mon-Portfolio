@@ -10,6 +10,7 @@ Ce projet a été conçu pour présenter mon parcours, mes compétences et mes r
 - **Navigation fluide** : Utilisation de `react-router-dom` pour une expérience utilisateur sans rechargement de page.
 - **Design Responsive** : Adapté aux ordinateurs, tablettes et mobiles.
 - **Carte Interactive** : Intégration de `react-leaflet` pour la géolocalisation.
+- **SEO Optimisé** : Utilisation de `react-helmet-async` pour le référencement et les réseaux sociaux.
 - **Animations** : Utilisation de `framer-motion` et d'une mascotte interactive ludique.
 - **Projets Dynamiques** : Présentation claire de mes projets GitHub.
 - **CV Téléchargeable** : Accès direct à mon Curriculum Vitae.
