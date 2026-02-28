@@ -15,7 +15,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Cinema Reservation Backend",
+      title: "Système de réservation de cinéma",
       description: "L'API Backend robuste pour le système de réservation de cinéma, gérant la logique métier, les réservations et l'authentification.",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", // Serveurs / Code
       technologies: ["C#", ".NET Core", "API REST"],
