@@ -7,7 +7,7 @@
   color: white;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999; /* Très élevé pour passer au-dessus de la carte Leaflet */
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -90,7 +90,7 @@
     transition: 0.3s ease-in-out;
     padding: 1rem 0;
     gap: 1.5rem; /* Espacement réduit */
-    overflow-y: auto; /* Permet le scroll si le menu est trop long */
+    z-index: 9998; /* Juste en dessous de la barre mais au-dessus du reste */
   }
 
   .navbar-links.active {
