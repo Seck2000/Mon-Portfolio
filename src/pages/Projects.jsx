@@ -39,6 +39,7 @@ const Projects = () => {
       technologies: ["C#", ".NET"],
       githubLink: "https://github.com/Seck2000/Revenue_Quebec",
       demoLink: null
+    },
     {
       id: 5,
       title: "Gestion de budget",
