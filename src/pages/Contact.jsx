@@ -102,7 +102,7 @@ const Contact = () => {
 
           {/* Carte */}
           <div className="map-wrapper">
-             <h3>Ma localisation</h3>
+             <h3>Localisation</h3>
              <div className="map-container-leaflet">
                 <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
                   <TileLayer
