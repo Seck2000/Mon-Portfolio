@@ -1,60 +1,119 @@
-# Portfolio - Aissatou Seck
+# Mon Portfolio - Portfolio Personnel React
 
-Bienvenue sur le dépôt GitHub de mon portfolio personnel ! 
-Ce projet a été conçu pour présenter mon parcours, mes compétences et mes réalisations en tant qu'étudiante en informatique passionnée par le développement web.
+Application web Single Page Application (SPA) développée avec React et Vite pour présenter mon profil, mes compétences et mes projets en informatique.
 
 🚀 **Démo en ligne :** [https://mon-portfolio-iota-ivory.vercel.app](https://mon-portfolio-iota-ivory.vercel.app)
 
-## 📋 Fonctionnalités
+## 📋 Table des matières
 
-- **Navigation fluide** : Utilisation de `react-router-dom` pour une expérience utilisateur sans rechargement de page.
-- **Design Responsive** : Adapté aux ordinateurs, tablettes et mobiles.
-- **Carte Interactive** : Intégration de `react-leaflet` pour la géolocalisation.
-- **SEO Optimisé** : Utilisation de `react-helmet-async` pour le référencement et les réseaux sociaux.
-- **Animations** : Utilisation de `framer-motion` et d'une mascotte interactive ludique.
-- **Projets Dynamiques** : Présentation claire de mes projets GitHub.
-- **CV Téléchargeable** : Accès direct à mon Curriculum Vitae.
-- **Formulaire de Contact** : Interface simple pour me joindre.
+- [Description](#description)
+- [Fonctionnalités](#fonctionnalités)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Structure du projet](#structure-du-projet)
+- [Déploiement](#déploiement)
+- [Auteur](#auteur)
 
-## 🛠 Technologies Utilisées
+## 📖 Description
 
-Ce projet est construit avec les outils modernes de l'écosystème React :
+Ce portfolio est une vitrine professionnelle interactive permettant de :
+- Consulter mon parcours et mon CV.
+- Visualiser mes projets GitHub via une interface soignée.
+- Me contacter via un formulaire interactif.
+- Localiser ma position géographique sur une carte dynamique.
 
-- **[React](https://reactjs.org/)** - Bibliothèque JavaScript pour l'interface utilisateur.
-- **[Vite](https://vitejs.dev/)** - Outil de build ultra-rapide.
-- **[React Router](https://reactrouter.com/)** - Gestion du routage.
-- **[Leaflet](https://leafletjs.com/)** & **[React Leaflet](https://react-leaflet.js.org/)** - Cartes interactives.
-- **[Framer Motion](https://www.framer.com/motion/)** - Animations fluides.
-- **CSS3** - Styles personnalisés et modernes.
+Il est conçu pour être performant, responsive et facile à maintenir.
 
-## 🚀 Installation Locale
+## ✨ Fonctionnalités
 
-Si vous souhaitez cloner et exécuter ce projet sur votre machine :
+### Navigation et Interface
+- **SPA (Single Page Application)** : Navigation fluide sans rechargement grâce à `react-router-dom`.
+- **Responsive Design** : Interface adaptée aux mobiles, tablettes et bureaux.
+- **Thème sombre/clair** : Design moderne avec une palette de couleurs professionnelle.
 
-1.  **Cloner le dépôt :**
-    ```bash
-    git clone https://github.com/Seck2000/Mon-Portfolio.git
-    cd Mon-Portfolio
-    ```
+### Pages et Composants
+- **Accueil** : Présentation générale avec profil et call-to-action.
+- **À propos** : Parcours académique et professionnel détaillé.
+- **Projets** : Galerie de projets avec liens vers GitHub et démos.
+- **Compétences** : Visualisation des compétences techniques (badges).
+- **CV** : Visualiseur PDF intégré et bouton de téléchargement.
+- **Contact** : 
+  - Formulaire de contact fonctionnel.
+  - Carte interactive (Leaflet) montrant la localisation.
+  - Mascotte animée réagissant aux actions de l'utilisateur.
 
-2.  **Installer les dépendances :**
-    ```bash
-    npm install
-    ```
+## 🔧 Prérequis
 
-3.  **Lancer le serveur de développement :**
-    ```bash
-    npm run dev
-    ```
+Avant de commencer, assurez-vous d'avoir installé :
 
-4.  Ouvrez votre navigateur sur `http://localhost:5173`.
+- **Node.js** (v18.0.0 ou supérieur)
+- **npm** (v9.0.0 ou supérieur) ou **yarn**
+
+## 📥 Installation
+
+### Étape 1 : Cloner le projet
+
+```bash
+git clone https://github.com/Seck2000/Mon-Portfolio.git
+cd Mon-Portfolio
+```
+
+### Étape 2 : Installer les dépendances
+
+```bash
+npm install
+```
+
+### Étape 3 : Lancer le serveur de développement
+
+```bash
+npm run dev
+```
+
+L'application sera accessible à l'adresse `http://localhost:5173`.
+
+## 📁 Structure du projet
+
+```
+Mon-Portfolio/
+├── public/               # Fichiers statiques (images, CV, robots.txt)
+├── src/                  # Code source
+│   ├── assets/           # Ressources (images, icônes)
+│   ├── components/       # Composants réutilisables
+│   │   ├── Navbar.jsx    # Barre de navigation responsive
+│   │   ├── Footer.jsx    # Pied de page
+│   │   ├── SEO.jsx       # Gestion des méta-données (Head)
+│   │   └── ...
+│   ├── pages/            # Pages de l'application
+│   │   ├── Home.jsx      # Page d'accueil
+│   │   ├── About.jsx     # Page À propos
+│   │   ├── Projects.jsx  # Page Projets
+│   │   ├── Skills.jsx    # Page Compétences
+│   │   ├── CV.jsx        # Page CV (PDF viewer)
+│   │   └── Contact.jsx   # Page Contact (Formulaire + Map)
+│   ├── App.jsx           # Composant racine et routing
+│   ├── main.jsx          # Point d'entrée React
+│   └── index.css         # Styles globaux
+├── .npmrc                # Configuration NPM (legacy-peer-deps pour Vercel)
+├── index.html            # Point d'entrée HTML
+├── package.json          # Dépendances et scripts
+└── vite.config.js        # Configuration Vite
+```
+
+## 🚀 Déploiement
+
+Le projet est configuré pour être déployé facilement sur **Vercel**.
+
+1. Pousser le code sur GitHub.
+2. Connecter le dépôt à Vercel.
+3. Le déploiement se fait automatiquement à chaque push.
+
+> Un fichier `vercel.json` est inclus pour gérer la réécriture des URL (SPA routing).
 
 ## 👤 Auteur
 
 **Aissatou Seck**
+
 - **GitHub** : [@Seck2000](https://github.com/Seck2000)
 - **LinkedIn** : [Aissatou Seck](https://www.linkedin.com/in/aissatou-seck-70a550393)
 - **Email** : aminabalde200@gmail.com
-
----
-*Fait avec ❤️ et React.*
