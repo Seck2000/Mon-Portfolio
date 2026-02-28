@@ -128,3 +128,14 @@
     border-color: #4338ca;
   }
 }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-header {
+    margin-bottom: 2rem;
+  }
+}

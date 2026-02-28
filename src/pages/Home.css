@@ -65,6 +65,12 @@
   color: #555;
 }
 
+@media (prefers-color-scheme: dark) {
+  .hero-content p {
+    color: #ccc;
+  }
+}
+
 .status-text {
   margin-bottom: 2.5rem !important; /* Marge plus grande avant les boutons */
   font-weight: 500;
@@ -79,13 +85,6 @@
   .status-text {
     color: #fff !important;
     background-color: rgba(100, 108, 255, 0.2);
-  }
-}
-
-
-@media (prefers-color-scheme: dark) {
-  .hero-content p {
-    color: #ccc;
   }
 }
 
@@ -135,4 +134,41 @@
 
 .btn-secondary:hover {
   background-color: rgba(255,255,255,0.1);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem 0;
+  }
+
+  .profile-image {
+    width: 150px; /* Plus petit sur mobile */
+    height: 150px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem; /* Titre plus petit */
+  }
+
+  .hero-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column; /* Boutons l'un sous l'autre */
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%; /* Boutons pleine largeur */
+    text-align: center;
+    box-sizing: border-box;
+  }
 }

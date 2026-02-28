@@ -131,3 +131,20 @@
     border-color: #444;
   }
 }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Empiler les colonnes */
+    gap: 2rem;
+  }
+
+  .contact-form, .contact-info {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .contact-container {
+    padding: 1rem;
+  }
+}

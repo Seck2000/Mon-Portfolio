@@ -15,6 +15,20 @@
 }
 
 #root {
-  /* Ensure root takes full height if not already */
   min-height: 100vh;
+}
+
+/* Responsive Global */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem; /* Réduire les marges sur mobile */
+  }
+  
+  h1 {
+    font-size: 2rem !important; /* Réduire les titres H1 */
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
 }
