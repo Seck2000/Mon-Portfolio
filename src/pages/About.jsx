@@ -18,64 +18,29 @@ const About = () => {
         <div className="about-text">
           <h2>Qui suis-je ?</h2>
           <p>
-            Je suis <strong>Aissatou Seck</strong>, étudiante en fin de baccalauréat en informatique à l’<strong>Université du Québec à Rimouski (UQAR)</strong>.
-            Je m’intéresse particulièrement au développement d’applications web en <strong>C# et ASP.NET</strong>.
+            Je m'appelle <strong>Aissatou Seck</strong>, je suis étudiante en informatique basée à <strong>Lévis, Québec</strong>.
+            Passionnée par le numérique depuis toujours, j'ai orienté mes études vers le développement logiciel et la conception d'applications.
           </p>
+
+          <h2>Mon Parcours</h2>
           <p>
-            Au cours de ma formation, j’ai eu l’occasion de réaliser plusieurs projets concrets intégrant une base de données, la gestion des utilisateurs et des fonctionnalités comme le paiement en ligne.
-            Sérieuse, organisée et motivée, j’aime apprendre et relever de nouveaux défis.
-          </p>
-          <p className="highlight-box">
-            🚀 <strong>Actuellement en fin de parcours universitaire, je suis à la recherche d’un stage en développement logiciel</strong> afin d’acquérir une première expérience professionnelle dans le domaine et continuer à développer mes compétences.
+            Actuellement en fin de formation universitaire, j'ai acquis des bases solides en algorithmique, en bases de données et en développement web.
+            J'aime particulièrement le côté créatif du développement front-end (React, CSS) tout en appréciant la rigueur du back-end.
           </p>
 
-          <div className="about-section">
-            <h2>🎓 Formation</h2>
-            <ul className="timeline">
-              <li>
-                <strong>Baccalauréat en Informatique (2023 – en cours)</strong><br/>
-                UQAR | Campus de Lévis<br/>
-                <span className="details">Programme couvrant la programmation, l’architecture logicielle, les bases de données et le développement d’applications web.</span>
-              </li>
-              <li>
-                <strong>Études en ingénierie informatique (2021 - 2023)</strong><br/>
-                Université Kofi Annan de Guinée, Conakry.
-              </li>
-              <li>
-                <strong>DEP en Sciences Mathématiques (2020 - 2021)</strong><br/>
-                Groupe Scolaire Elhadj Moryba Yansané à Conakry en Guinée.
-              </li>
-            </ul>
-          </div>
-
-          <div className="about-section">
-            <h2>💼 Expérience de travail</h2>
-            <ul className="timeline">
-              <li>
-                <strong>Intervenante Spécialisée en Pacification et Sécurité (2024 – en cours)</strong><br/>
-                CISSS de Chaudière-Appalaches, Hôtel-Dieu de Lévis<br/>
-                <span className="details">Assurer l’accompagnement des patient(e)s, prévenir et désamorcer les situations à risque, et collaborer étroitement avec les équipes interdisciplinaires.</span>
-              </li>
-              <li>
-                <strong>Artiste Sandwich Junior (Juillet 2023 - Juillet 2024)</strong><br/>
-                Subway à Lévis<br/>
-                <span className="details">Service à la clientèle, gestion des transactions à la caisse et entretien.</span>
-              </li>
-              <li>
-                <strong>Commis fruits et légumes (Juin 2023 - Août 2023)</strong><br/>
-                Maxi à Lévis (rue du Président Kennedy)<br/>
-                <span className="details">Approvisionnement, organisation du rayon et maintien de la propreté.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="about-section">
-            <h2>🌟 Loisirs et intérêts</h2>
-            <p>Sport, Cuisine, Cinéma, Voyage, Technologie numérique.</p>
-          </div>
+          <h2>Mes Objectifs</h2>
+          <p>
+            Mon objectif principal aujourd'hui est de décrocher un <strong>stage de fin d'études</strong>.
+            Je souhaite rejoindre une équipe dynamique où je pourrai :
+          </p>
+          <ul>
+            <li>Mettre en pratique mes compétences techniques.</li>
+            <li>Apprendre des meilleures pratiques de l'industrie.</li>
+            <li>Contribuer à des projets concrets et utiles.</li>
+          </ul>
 
           <div className="about-cta">
-            <Link to="/cv" className="btn btn-primary">Voir mon CV complet</Link>
+            <Link to="/cv" className="btn btn-primary">Voir mon CV</Link>
             <Link to="/contact" className="btn btn-outline">Me contacter</Link>
           </div>
         </div>
