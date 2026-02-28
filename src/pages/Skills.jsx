@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import './Skills.css';
 
 const Skills = () => {
@@ -60,6 +61,11 @@ const Skills = () => {
 
   return (
     <div className="skills-container">
+      <SEO 
+        title="Mes Compétences" 
+        description="Aperçu des compétences techniques (C#, React, SQL) et personnelles d'Aissatou Seck." 
+        keywords="Compétences, Skills, C#, React, SQL Server, Développement Web"
+      />
       <div className="skills-header">
         <h1>Mes Compétences</h1>
         <p>Un aperçu de mes acquis techniques, linguistiques et professionnels.</p>

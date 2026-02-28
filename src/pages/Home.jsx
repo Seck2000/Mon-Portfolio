@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import './Home.css';
 
 const Home = () => {
   return (
     <div className="home-container">
+      <SEO 
+        title="Accueil" 
+        description="Bienvenue sur le portfolio d'Aissatou Seck, étudiante en informatique. Découvrez mes projets, compétences et parcours." 
+        keywords="Aissatou Seck, Portfolio, Informatique, Développement Web, React, C#"
+      />
       <div className="hero-content">
         <div className="profile-image-container">
           <img 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mon-portfolio-iota-ivory.vercel.app/sitemap.xml

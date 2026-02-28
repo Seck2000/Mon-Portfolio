@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import './About.css';
 
 const About = () => {
   return (
     <div className="about-container">
+      <SEO 
+        title="À propos" 
+        description="Découvrez le parcours d'Aissatou Seck, étudiante en informatique à Lévis. Passionnée par le développement web et la conception logicielle." 
+        keywords="À propos, Aissatou Seck, Parcours, Étudiante Informatique, Lévis"
+      />
       <div className="about-header">
         <h1>À propos de moi</h1>
         <div className="underline"></div>

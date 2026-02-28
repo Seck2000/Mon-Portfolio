@@ -53,6 +53,11 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
+      <SEO 
+        title="Mes Projets" 
+        description="Consultez le portfolio des projets d'Aissatou Seck : CinéReserv, Gestion de budget, et autres applications web et logicielles." 
+        keywords="Projets, Portfolio, GitHub, C#, React, ASP.NET, Développement"
+      />
       <div className="projects-header">
         <h1>Mes Projets</h1>
         <p>Voici une sélection de mes travaux disponibles sur mon GitHub.</p>

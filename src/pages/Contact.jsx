@@ -4,6 +4,7 @@ import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import InteractiveMascot from '../components/InteractiveMascot';
+import SEO from '../components/SEO';
 import './Contact.css';
 
 // Correctif pour l'icône par défaut de Leaflet
@@ -65,6 +66,11 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      <SEO 
+        title="Contact" 
+        description="Contactez Aissatou Seck via le formulaire, par email ou téléphone. Localisée à Lévis, Québec." 
+        keywords="Contact, Aissatou Seck, Email, Téléphone, Lévis"
+      />
       <h1>Me contacter</h1>
       <p>N'hésitez pas à me laisser un message pour toute opportunité ou question.</p>
       

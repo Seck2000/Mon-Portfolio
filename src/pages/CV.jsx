@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import './CV.css';
 
 const CV = () => {
@@ -6,6 +7,11 @@ const CV = () => {
 
   return (
     <div className="cv-container">
+      <SEO 
+        title="Mon CV" 
+        description="Téléchargez le CV d'Aissatou Seck. Étudiante en informatique, expériences et formation détaillée." 
+        keywords="CV, Curriculum Vitae, Aissatou Seck, Recrutement, Stage"
+      />
       <h1>Mon Curriculum Vitae</h1>
       <p>Voici un aperçu de mon parcours académique et professionnel.</p>
       
