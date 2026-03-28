@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const SEO = ({ title, description, keywords, image, url }) => {
   const siteTitle = "Portfolio - Aissatou Seck";
   const defaultDescription = "Portfolio d'Aissatou Seck, étudiante en informatique spécialisée en développement web et logiciel.";
-  const defaultImage = "/profile.jpg"; // Image par défaut
+  const defaultImage = "/photo.jpg"; // Image par défaut
 
   return (
     <Helmet>
