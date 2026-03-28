@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import emailjs from '@emailjs/browser';
 import InteractiveMascot from '../components/InteractiveMascot';
 import SEO from '../components/SEO';
 import './Contact.css';
@@ -19,9 +20,11 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const Contact = () => {
+  const form = useRef();
+  
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    user_email: '',
     message: ''
   });
   
@@ -55,13 +58,29 @@ const Contact = () => {
     e.preventDefault();
     setIsSending(true); // Déclenche l'animation d'envoi (fusée/courrier)
     
-    // Simuler un délai d'envoi pour laisser l'animation se jouer
-    setTimeout(() => {
-      console.log('Form data submitted:', formData);
-      alert('Message envoyé avec succès ! 🚀');
-      setIsSending(false); // La mascotte revient
-      setFormData({ name: '', email: '', message: '' });
-    }, 2000); // 2 secondes pour laisser le temps à l'animation
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    // On prépare explicitement les variables pour EmailJS, en incluant l'email dans le message
+    const templateParams = {
+      name: formData.name,
+      user_email: formData.user_email,
+      message: `[Email de l'expéditeur : ${formData.user_email}]\n\n${formData.message}`
+    };
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      .then((result) => {
+          console.log('Success:', result.text);
+          alert('Message envoyé avec succès ! 🚀');
+          setFormData({ name: '', user_email: '', message: '' });
+      }, (error) => {
+          console.log('Error:', error.text);
+          alert("Une erreur s'est produite lors de l'envoi du message.");
+      })
+      .finally(() => {
+          setIsSending(false); // La mascotte revient
+      });
   };
 
   return (
@@ -88,10 +107,7 @@ const Contact = () => {
               <span>📧</span>
               <a href="mailto:aminabalde200@gmail.com">aminabalde200@gmail.com</a>
             </div>
-            <div className="contact-item">
-              <span>📞</span>
-              <a href="tel:+14184552011">418 455 2011</a>
-            </div>
+            
             <div className="contact-item">
               <span>🔗</span>
               <a href="https://www.linkedin.com/in/aissatou-seck-70a550393" target="_blank" rel="noopener noreferrer">
@@ -137,7 +153,7 @@ const Contact = () => {
           <InteractiveMascot isFocused={isFocused} isSending={isSending} />
 
           <h2>Envoyer un message</h2>
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Nom</label>
               <input 
@@ -158,8 +174,8 @@ const Contact = () => {
               <input 
                 type="email" 
                 id="email" 
-                name="email" 
-                value={formData.email} 
+                name="user_email" 
+                value={formData.user_email} 
                 onChange={handleChange} 
                 onFocus={handleFocus}
                 onBlur={handleBlur}

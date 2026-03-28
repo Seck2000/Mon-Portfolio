@@ -1,7 +1,9 @@
 .about-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-header {
@@ -10,7 +12,7 @@
 }
 
 .about-header h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   color: #333;
   margin-bottom: 0.5rem;
 }
@@ -27,13 +29,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 @media (min-width: 768px) {
   .about-content {
     flex-direction: row;
     align-items: flex-start;
+    gap: 3rem;
   }
 }
 
@@ -41,26 +44,18 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  /* On enlève le sticky par défaut pour éviter les bugs, on le remettra uniquement sur grand écran */
+  width: 100%;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 300px;
+  max-width: clamp(200px, 40vw, 300px);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   object-fit: cover;
 }
 
-/* ... */
-
 @media (min-width: 768px) {
-  .about-content {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  /* Sticky uniquement sur grand écran où il y a de la place à côté du texte */
   .about-image {
     position: sticky;
     top: 100px;
@@ -69,10 +64,12 @@
 
 .about-text {
   flex: 2;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-text h2 {
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
   color: #2c3e50;
   margin-bottom: 1rem;
   margin-top: 2rem;
@@ -83,14 +80,22 @@
 .about-text h2:first-child {
   margin-top: 0;
   border-bottom: none;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 4vw, 2rem);
 }
 
 .about-text p {
-  font-size: 1.05rem;
+  font-size: clamp(1rem, 2.5vw, 1.05rem);
   line-height: 1.7;
   color: #555;
   margin-bottom: 1rem;
+}
+
+.about-text ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: clamp(1rem, 2.5vw, 1.05rem);
+  line-height: 1.7;
 }
 
 .highlight-box {
@@ -99,6 +104,7 @@
   padding: 1rem;
   border-radius: 4px;
   margin: 1.5rem 0;
+  box-sizing: border-box;
 }
 
 /* Timeline style pour Formation et Expérience */
@@ -129,14 +135,14 @@
 
 .timeline strong {
   display: block;
-  font-size: 1.1rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.1rem);
   color: #333;
   margin-bottom: 0.2rem;
 }
 
 .details {
   display: block;
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
   color: #666;
   margin-top: 0.3rem;
   font-style: italic;
@@ -145,7 +151,8 @@
 .about-cta {
   display: flex;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .btn-outline {
@@ -157,10 +164,22 @@
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .btn-outline:hover {
   background: rgba(100, 108, 255, 0.1);
+}
+
+@media (max-width: 480px) {
+  .about-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+  .about-cta .btn, .about-cta .btn-outline {
+    width: 100%;
+  }
 }
 
 /* Dark mode */
@@ -169,7 +188,7 @@
     color: #fff;
   }
   
-  .about-text p, .details {
+  .about-text p, .about-text ul, .details {
     color: #ccc;
   }
   

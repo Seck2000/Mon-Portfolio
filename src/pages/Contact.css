@@ -2,9 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-container h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.contact-container p {
+  text-align: center;
+  color: #555;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 .contact-content {
@@ -18,12 +31,14 @@
 
 .contact-form, .contact-info {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Informations de contact */
 .contact-info h2, .contact-form h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   margin-bottom: 1.5rem;
   color: #333;
 }
@@ -39,7 +54,8 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  word-break: break-word; /* Evite les débordements de l'email */
 }
 
 .contact-item a {
@@ -62,23 +78,24 @@
 
 .map-wrapper h3 {
   margin-bottom: 1rem;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   color: #444;
 }
 
 .map-container-leaflet {
-  height: 300px;
+  height: clamp(250px, 40vh, 400px);
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border: 1px solid #ddd;
-  z-index: 0; /* Important pour que le menu passe au dessus si besoin */
+  z-index: 0; 
 }
 
 /* Formulaire */
 .form-group {
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .form-group label {
@@ -97,6 +114,7 @@
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.3s;
+  box-sizing: border-box; /* Assure que le padding ne casse pas la largeur */
 }
 
 .form-group input:focus,
@@ -110,8 +128,17 @@
   resize: vertical;
 }
 
+.contact-form .btn {
+  width: 100%; /* Bouton pleine largeur sur tous les écrans pour l'harmonie */
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
 /* Mode sombre */
 @media (prefers-color-scheme: dark) {
+  .contact-container p {
+    color: #ccc;
+  }
   .contact-info h2, .contact-form h2, .map-wrapper h3 {
     color: #fff;
   }
@@ -135,16 +162,12 @@
 /* Responsive Mobile */
 @media (max-width: 768px) {
   .contact-content {
-    flex-direction: column; /* Empiler les colonnes */
+    flex-direction: column; 
     gap: 2rem;
   }
 
   .contact-form, .contact-info {
     width: 100%;
     min-width: auto;
-  }
-
-  .contact-container {
-    padding: 1rem;
   }
 }

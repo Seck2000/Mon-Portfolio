@@ -2,38 +2,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
   min-height: 80vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cv-container h1 {
   margin-bottom: 0.5rem;
   color: #333;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  text-align: center;
 }
 
 .cv-container p {
   color: #666;
   margin-bottom: 2rem;
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 .cv-actions {
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cv-actions .btn {
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .pdf-viewer {
   width: 100%;
-  height: 800px;
+  height: clamp(500px, 80vh, 800px);
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   background-color: #f9f9f9;
+  box-sizing: border-box;
 }
 
 .pdf-viewer iframe {
   border: none;
+  width: 100%;
+  height: 100%;
 }
 
 /* Mode sombre */
@@ -53,8 +70,8 @@
 }
 
 /* Responsive pour mobile */
-@media (max-width: 768px) {
-  .pdf-viewer {
-    height: 500px;
+@media (max-width: 480px) {
+  .cv-actions .btn {
+    width: 100%;
   }
 }

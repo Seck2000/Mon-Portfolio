@@ -14,7 +14,7 @@ const Home = () => {
       <div className="hero-content">
         <div className="profile-image-container">
           <img 
-            src="/profile.jpg" 
+            src="/public/photo.jpeg" 
             alt="Photo de profil" 
             className="profile-image" 
           />
